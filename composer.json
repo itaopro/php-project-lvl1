@@ -1,0 +1,10 @@
+{
+    "name": "root/php-project-lvl1",
+    "authors": [
+        {
+            "name": "Nikolai Malchikov",
+            "email": "malchikov.ne@gmail.com"
+        }
+    ],
+    "require": {}
+}
