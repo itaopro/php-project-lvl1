@@ -6,10 +6,11 @@
             "email": "malchikov.ne@gmail.com"
         }
     ],
-      "autoload": {
-    "psr-4": {
-      "Php\\project\\lvl1\\": "src",
-    }
+  "autoload": {
+    "files": [
+      "src/Cli.php",
+      "src/EvenCheck.php"
+    ]
   },
     "require": {}
 }
