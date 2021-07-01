@@ -12,5 +12,6 @@
       "src/EvenCheck.php"
     ]
   },
-    "require": {}
-}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.11"
+    }
