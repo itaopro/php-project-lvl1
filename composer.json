@@ -1,5 +1,7 @@
 {
     "name": "root/php-project-lvl1",
+    "description": "Simple brain games",
+    "type": "project",
     "authors": [
         {
             "name": "Nikolai Malchikov",
@@ -12,5 +14,9 @@
       "src/EvenCheck.php"
     ]
   },
-    "require": {}
-}
+        "bin": [
+        "bin/brain-games"
+    ],
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.11"
+    }
