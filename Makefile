@@ -7,3 +7,5 @@ validate:
 		composer validate
 lint:
 	composer run-script phpcs  .
+brain-even:
+		./bin/brain-even
