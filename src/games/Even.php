@@ -2,24 +2,30 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\GameFlow\gameFlow;
+use BrainGames\Engine;
 
-use const BrainGames\GameFlow\MAX_ROUNDS_COUNT;
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function braineven()
+function isEven(int $number): bool
 {
-    $gameData = generateGameData();
-    $greeting = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
-    gameFlow($greeting, $gameData);
+    return $number % 2 === 0;
 }
 
-function generateGameData()
+function genRoundData(): array
+{
+    $number = rand(10, 99);
+    $question = (string) $number;
+    $answer = isEven($number) ? 'yes' : 'no';
+
+    return [$question, $answer];
+}
+
+function runGame(): void
 {
     $gameData = [];
-    for ($round = 0; $round < MAX_ROUNDS_COUNT; $round += 1) {
-        $question = rand(1, 99);
-        $correctAnswer = ($question % 2 === 0) ? 'yes' : 'no';
-        $gameData[] = [$question, $correctAnswer];
+    for ($i = 0; $i < Engine\ROUNDS_COUNT; $i += 1) {
+        $gameData[] = genRoundData();
     }
-    return $gameData;
+
+    Engine\run(DESCRIPTION, $gameData);
 }
