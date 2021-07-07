@@ -11,6 +11,7 @@
         "scripts": {
         "phpcs": "phpcs"
     },
+  "license": "MIT",
   "autoload": {
     "files": [
         "src/Cli.php",
